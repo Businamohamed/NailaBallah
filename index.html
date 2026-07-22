@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تركيز Tarkeez - جلسات قراية مركزة</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>تركيز Tarkeez</h1>
+  <p class="sub">تركيز = درجتك 🌳</p>
+
+  <!-- شاشة البداية -->
+  <div id="setup">
+    <input id="subject" placeholder="اكتبي اسم المادة... مثلا: قواعد بيانات">
+    <button id="startBtn">ابدأ جلسة تركيز 25 دقيقة</button>
+    <div class="stats">
+      <div class="stat"><b id="totalSessions">0</b>جلسة</div>
+      <div class="stat"><b id="totalHours">0.0</b>ساعة</div>
+    </div>
+  </div>
+
+  <!-- شاشة المؤقت -->
+  <div id="session" class="hidden">
+    <div class="sub" id="currentSubject"></div>
+    <div class="timer" id="timer">25:00</div>
+    <div class="tree" id="tree">🌱</div>
+    <button id="stopBtn">أنهيت الجلسة</button>
+    <button id="cancelBtn" class="ghost">إلغاء</button>
+    <div id="alert" class="hidden">⚠️ انتبهي! طلعتي من الصفحة. الشجرة حتموت 😢</div>
+  </div>
+
+  <!-- شاشة التقرير -->
+  <div id="report" class="hidden">
+    <h2>مبروك! 🎉</h2>
+    <p>أكملتي جلسة <b id="lastSubject"></b></p>
+    <div class="tree" style="font-size:100px;">🌳</div>
+    <button id="againBtn">جلسة جديدة</button>
+    <button id="statsBtn" class="ghost">عرض إحصائياتي</button>
+  </div>
+</div>
+
